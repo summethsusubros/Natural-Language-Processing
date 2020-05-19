@@ -137,26 +137,6 @@ def generate_seq(model, encoder_dictionary, seqence_length, input_text, no_of_ch
 		in_text += char
 	return in_text
 
-# generate a sequence of characters with a language model
-def generate_seq(model, encoder_dictionary, seqence_length, input_text, no_of_chars_to_be_generated):
-	in_text = input_text
-	# generate a fixed number of characters
-	for _ in range(no_of_chars_to_be_generated):
-		# encode the characters as integers
-		encoded = [encoder_dictionary[char] for char in in_text]
-		# truncate sequences to a fixed length
-		encoded = pad_sequences([encoded], maxlen=seqence_length, truncating='pre')
-		# predict character
-		yhat = model.predict_classes(encoded, verbose=0)
-		# reverse map integer to character
-		out_char = ''
-		for char, index in encoder_dictionary.items():
-			if index == yhat:
-				out_char = char
-				break
-		# append to input
-		in_text += char
-	return in_text
 
 #SimpleRNN model testing.
 inp = 'the'
