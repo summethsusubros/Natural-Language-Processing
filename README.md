@@ -5,7 +5,7 @@ Natural language processing (NLP) is a subfield of linguistics, computer science
 
 This repo is created in a motive to settle all the codes of NLP's major appilications in a single repo.
 
-<img src="http://nlpminds.com/wp-content/uploads/2018/02/NLP.jpg" >
+<img src="https://www.xoriant.com/blog/wp-content/uploads/2020/01/Thumbnail_2-1140x660.jpg" >
 
 The repos in this master repo are:
 
